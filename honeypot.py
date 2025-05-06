@@ -14,7 +14,7 @@ os.makedirs("logs", exist_ok=True)
 @app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH'])
 def log_request(path):
     log_entry = {
-        "timestamp": str(datetime.datetime.utcnow()),
+        "timestamp": str(datetime.datetime.now()),
         "remote_ip": request.remote_addr,
         "method": request.method,
         "path": path,
