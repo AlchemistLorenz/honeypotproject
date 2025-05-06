@@ -4,7 +4,9 @@ This project is a low-interaction honeypot designed to detect and log HTTP-based
 
 ## Project Structure
 ├── honeypot.py # Flask honeypot server
+
 ├── generateBenign.sh # Simulates benign traffic using curl
+
 ├── logs/
 │ └── honeypot_logs.jsonl # Captured logs in JSON Lines format
 ├── parseLogs.py # Parses JSON logs → dataset.csv
