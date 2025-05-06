@@ -1,12 +1,11 @@
+# Importing Packages
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-import joblib
 
-# Load labeled dataset
+# Load already labeled dataset
 df = pd.read_csv("labeled_dataset.csv")
 
-# Split data: labeled vs unlabeled
+# Split data: labeled and unlabeled
 labeled_df = df[df['label'].notna()]
 unlabeled_df = df[df['label'].isna()]
 
@@ -28,7 +27,7 @@ unlabeled_df["label"] = predicted_labels
 # Combine and sort full dataset
 fully_labeled_df = pd.concat([labeled_df, unlabeled_df]).sort_index()
 
-# Save to new file
+# Save to file
 fully_labeled_df.to_csv("fully_labeled_dataset.csv", index=False)
-print("✅ Saved fully labeled dataset to: fully_labeled_dataset.csv")
-print(f"📦 New rows labeled: {len(unlabeled_df)}")
+print("Saved fully labeled dataset to: fully_labeled_dataset.csv")
+print(f"New rows labeled: {len(unlabeled_df)}")

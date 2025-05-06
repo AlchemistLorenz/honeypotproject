@@ -33,12 +33,12 @@ malicious_filter = (
     (df['path_length'] > 8)
 )
 df.loc[malicious_filter, "label"] = 1
-print(f"⚠️ Auto-labeled {malicious_filter.sum()} rows as malicious (label=1)")
+print(f"Auto-labeled {malicious_filter.sum()} rows as malicious (label=1)")
 
 # Reporting unlabeled entries
 remaining_unlabeled = df['label'].isna().sum()
-print(f"ℹ️ Remaining unlabeled entries: {remaining_unlabeled}")
+print(f"Remaining unlabeled entries: {remaining_unlabeled}")
 
 # Saving file
 df.to_csv(OUTPUT_CSV, index=False)
-print(f"\n💾 Labeled dataset saved to: {OUTPUT_CSV}")
+print(f"\nLabeled dataset saved to: {OUTPUT_CSV}")

@@ -1,12 +1,10 @@
 # Importing Libraries
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 # Load dataset
 df = pd.read_csv("fully_labeled_dataset.csv")
@@ -40,7 +38,6 @@ print(classification_report(y_test, y_pred_rf))
 # Confusion matrix for RF
 cm = confusion_matrix(y_test, y_pred_rf)
 plt.figure(figsize=(6,4))
-sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=["Benign", "Malicious"], yticklabels=["Benign", "Malicious"])
 plt.title("Random Forest Confusion Matrix")
 plt.xlabel("Predicted")
 plt.ylabel("Actual")

@@ -70,5 +70,5 @@ def fake_login():
 
 # Hard coded port, in future will ask user to input port number of their choice. 
 if __name__ == '__main__':
-    print("🚨 Honeypot running on http://0.0.0.0:8080")
+    print("Honeypot running on http://0.0.0.0:8080")
     app.run(host="0.0.0.0", port=8080, debug=False)
