@@ -9,14 +9,23 @@ This project is a low-interaction honeypot designed to detect and log HTTP-based
 
 ├── logs/
 │ └── honeypot_logs.jsonl # Captured logs in JSON Lines format
+
 ├── parseLogs.py # Parses JSON logs → dataset.csv
+
 ├── labelData.py # Label dataset entries manually or via rules
+
 ├── unlabeled.py # Uses trained model to label remaining rows
+
 ├── labeled_dataset.csv # Final labeled dataset
+
 ├── trainModel.py # Trains and evaluates ML classifiers
+
 ├── compareModels.py # Visualizes model performance
+
 ├── model_comparison_chart.png
+
 ├── rf_confusion_matrix.png
+
 └── README.md
 
 ## Getting Started
