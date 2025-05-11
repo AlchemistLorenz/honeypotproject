@@ -8,8 +8,6 @@ import matplotlib.pyplot as plt
 
 # Load dataset
 df = pd.read_csv("fully_labeled_dataset.csv")
-
-# ✅ Only keep rows with labeled data
 df = df[df['label'].notna()]
 
 # Separate features and label
