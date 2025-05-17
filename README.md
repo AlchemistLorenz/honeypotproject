@@ -47,7 +47,7 @@ run benign traffic generator
 ```bash
 bash generateBenign.sh
 ```
-not included in directorym but install dirsearch and run dirsearch.py
+not included in directory, but install dirsearch and run dirsearch.py
 
 ### 4. Parse Logs
 auto label based first
